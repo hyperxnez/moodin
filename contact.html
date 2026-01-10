@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Moodin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">Moodin</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="partners.html">Partners</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn-outline">Log In</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="contact-hero-title">Get in Touch</h1>
+            <p class="contact-hero-subtitle">Have questions? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2 class="contact-form-title">Send us a Message</h2>
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group-half">
+                                <label for="first-name" class="form-label">First Name</label>
+                                <input type="text" id="first-name" class="form-input" placeholder="John" required>
+                            </div>
+                            <div class="form-group-half">
+                                <label for="last-name" class="form-label">Last Name</label>
+                                <input type="text" id="last-name" class="form-input" placeholder="Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">Email</label>
+                            <input type="email" id="contact-email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone (Optional)</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-textarea" rows="6" placeholder="Tell us how we can help..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h2 class="contact-info-title">Contact Information</h2>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📧</div>
+                        <div class="contact-info-text">
+                            <h4>Email</h4>
+                            <p>support@moodin.com</p>
+                            <p>partnerships@moodin.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📞</div>
+                        <div class="contact-info-text">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                            <p>Mon-Fri: 9AM - 6PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📍</div>
+                        <div class="contact-info-text">
+                            <h4>Office</h4>
+                            <p>123 Innovation Street</p>
+                            <p>San Francisco, CA 94103</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">💬</div>
+                        <div class="contact-info-text">
+                            <h4>Social Media</h4>
+                            <div class="contact-social-links">
+                                <a href="#" class="contact-social-link">Facebook</a>
+                                <a href="#" class="contact-social-link">Instagram</a>
+                                <a href="#" class="contact-social-link">Twitter</a>
+                                <a href="#" class="contact-social-link">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq-section">
+        <div class="container">
+            <h2 class="section-title center">Frequently Asked Questions</h2>
+            <p class="faq-intro">Find quick answers to common questions</p>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h4>How does Moodin work?</h4>
+                    <p>Moodin uses your current mood to recommend restaurants and cafés that match your emotional state and preferences.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>Is Moodin free to use?</h4>
+                    <p>Yes! Moodin is completely free for users. We work with venue partners to provide you the best recommendations.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>How can I add my venue?</h4>
+                    <p>Visit our <a href="partners.html">Partners page</a> to learn more about joining our network of venues.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>What cities are you in?</h4>
+                    <p>We're currently available in major cities across the US, with plans to expand internationally soon.</p>
+                </div>
+            </div>
+            
+            <div class="faq-cta">
+                <p>Still have questions? <a href="#" class="inline-link-primary">Check our full FAQ</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Moodin</h3>
+                    <p class="footer-description">Find the perfect place for your mood.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="terms.html#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Moodin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

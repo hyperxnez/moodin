@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Moodin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <span class="signal">📶</span>
+                <span class="wifi">📶</span>
+                <span class="battery">🔋</span>
+            </div>
+        </div>
+
+        <!-- Auth Content -->
+        <div class="auth-container">
+            <button class="close-btn" onclick="history.back()">✕</button>
+            
+            <div class="auth-header">
+                <div class="logo-large">
+                    <span class="logo-text-large">Moodin</span>
+                </div>
+                <h1 class="auth-title">Welcome Back!</h1>
+                <p class="auth-subtitle">Log in to discover places that match your mood</p>
+            </div>
+
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" class="form-checkbox">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="auth-btn">Log In</button>
+            </form>
+
+            <div class="divider">
+                <span class="divider-text">or continue with</span>
+            </div>
+
+            <div class="social-auth">
+                <button class="social-btn">
+                    <span class="social-icon">🔵</span>
+                    <span>Facebook</span>
+                </button>
+                <button class="social-btn">
+                    <span class="social-icon">🔴</span>
+                    <span>Google</span>
+                </button>
+            </div>
+
+            <p class="auth-footer">
+                Don't have an account? 
+                <a href="signup.html" class="auth-link">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodin App - Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <span class="signal">📶</span>
+                <span class="wifi">📶</span>
+                <span class="battery">🔋</span>
+            </div>
+        </div>
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <button class="settings-btn">⚙️</button>
+            <div class="profile-avatar-large">
+                <img src="https://i.pravatar.cc/150?img=10" alt="Profile">
+            </div>
+            <h2 class="profile-name">Alex Morgan</h2>
+            <p class="profile-email">alex.morgan@email.com</p>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <!-- Mood Stats -->
+            <div class="mood-stats-section">
+                <h3>Your Mood Journey</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-info">
+                            <div class="stat-value">28</div>
+                            <div class="stat-label">Day Streak</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📍</div>
+                        <div class="stat-info">
+                            <div class="stat-value">47</div>
+                            <div class="stat-label">Places Visited</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-info">
+                            <div class="stat-value">23</div>
+                            <div class="stat-label">Reviews Written</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-value">850</div>
+                            <div class="stat-label">Mood Points</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This Week's Moods -->
+            <div class="weekly-moods-section">
+                <h3>This Week's Moods</h3>
+                <div class="mood-chart">
+                    <div class="mood-day">
+                        <span class="mood-day-emoji">😊</span>
+                        <span class="mood-day-label">Mon</span>
+                    </div>
+                    <div class="mood-day">
+                        <span class="mood-day-emoji">😌</span>
+                        <span class="mood-day-label">Tue</span>
+                    </div>
+                    <div class="mood-day">
+                        <span class="mood-day-emoji">⚡</span>
+                        <span class="mood-day-label">Wed</span>
+                    </div>
+                    <div class="mood-day">
+                        <span class="mood-day-emoji">😊</span>
+                        <span class="mood-day-label">Thu</span>
+                    </div>
+                    <div class="mood-day">
+                        <span class="mood-day-emoji">🤝</span>
+                        <span class="mood-day-label">Fri</span>
+                    </div>
+                    <div class="mood-day inactive">
+                        <span class="mood-day-emoji">⚪</span>
+                        <span class="mood-day-label">Sat</span>
+                    </div>
+                    <div class="mood-day inactive">
+                        <span class="mood-day-emoji">⚪</span>
+                        <span class="mood-day-label">Sun</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Favorites -->
+            <div class="favorites-section">
+                <div class="section-header-inline">
+                    <h3>Favorite Places</h3>
+                    <a href="#" class="view-all">View All →</a>
+                </div>
+                
+                <div class="favorite-list">
+                    <div class="favorite-item">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=100&h=100&fit=crop" alt="Place">
+                        <div class="favorite-info">
+                            <h5>The Cozy Corner</h5>
+                            <p class="favorite-meta">☕ Café • 1.2 km</p>
+                            <div class="favorite-rating">⭐ 4.8</div>
+                        </div>
+                        <button class="favorite-heart-btn active">❤️</button>
+                    </div>
+                    
+                    <div class="favorite-item">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=100&h=100&fit=crop" alt="Place">
+                        <div class="favorite-info">
+                            <h5>Sunlit Bistro</h5>
+                            <p class="favorite-meta">🍽️ Restaurant • 2.5 km</p>
+                            <div class="favorite-rating">⭐ 4.9</div>
+                        </div>
+                        <button class="favorite-heart-btn active">❤️</button>
+                    </div>
+                    
+                    <div class="favorite-item">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=100&h=100&fit=crop" alt="Place">
+                        <div class="favorite-info">
+                            <h5>Garden View</h5>
+                            <p class="favorite-meta">🌿 Café • 0.8 km</p>
+                            <div class="favorite-rating">⭐ 4.7</div>
+                        </div>
+                        <button class="favorite-heart-btn active">❤️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Options -->
+            <div class="profile-menu">
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">📖</span>
+                    <span class="menu-text">My Reviews</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">🎁</span>
+                    <span class="menu-text">Rewards & Offers</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">📊</span>
+                    <span class="menu-text">Mood Insights</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span class="menu-text">Settings</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">❓</span>
+                    <span class="menu-text">Help & Support</span>
+                    <span class="menu-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Logout Button -->
+            <button class="logout-btn">Log Out</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="search.html" class="nav-item">
+                <span class="nav-icon">🔍</span>
+                <span class="nav-label">Search</span>
+            </a>
+            <a href="bookings.html" class="nav-item">
+                <span class="nav-icon">📅</span>
+                <span class="nav-label">Bookings</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">Profile</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodin App - Place Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app-styles.css">
+</head>
+<body>
+    <div class="mobile-frame">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span class="time">9:41</span>
+            <div class="status-icons">
+                <span class="signal">📶</span>
+                <span class="wifi">📶</span>
+                <span class="battery">🔋</span>
+            </div>
+        </div>
+
+        <!-- Place Header Image -->
+        <div class="place-header">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="The Cozy Corner">
+            <button class="back-btn" onclick="history.back()">←</button>
+            <button class="favorite-btn">❤️</button>
+            <div class="image-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </div>
+
+        <!-- Place Content -->
+        <div class="place-content">
+            <!-- Basic Info -->
+            <div class="place-header-info">
+                <div class="place-title-section">
+                    <h1 class="place-detail-name">The Cozy Corner</h1>
+                    <div class="place-detail-meta">
+                        <span class="category-badge">☕ Café</span>
+                        <span class="distance-badge">📍 1.2 km away</span>
+                    </div>
+                </div>
+                <div class="mood-fit-large">
+                    <div class="mood-fit-circle">
+                        <span class="mood-fit-number">95</span>
+                        <span class="mood-fit-percent">%</span>
+                    </div>
+                    <span class="mood-fit-text">MoodFit Score</span>
+                </div>
+            </div>
+
+            <!-- Rating -->
+            <div class="rating-section">
+                <div class="rating-stars-large">⭐⭐⭐⭐⭐</div>
+                <span class="rating-detail">4.8 out of 5 (234 reviews)</span>
+            </div>
+
+            <!-- Tags -->
+            <div class="detail-tags">
+                <span class="detail-tag">Quiet</span>
+                <span class="detail-tag">Cozy</span>
+                <span class="detail-tag">Wi-Fi</span>
+                <span class="detail-tag">Pet-Friendly</span>
+                <span class="detail-tag">Outdoor Seating</span>
+            </div>
+
+            <!-- Peak Hours -->
+            <div class="peak-hours-section">
+                <h3>Peak Hours</h3>
+                <div class="peak-chart">
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 30%"></div>
+                        <span class="bar-label">6AM</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 50%"></div>
+                        <span class="bar-label">9AM</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 70%"></div>
+                        <span class="bar-label">12PM</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 85%"></div>
+                        <span class="bar-label">3PM</span>
+                    </div>
+                    <div class="chart-bar active">
+                        <div class="bar" style="height: 60%"></div>
+                        <span class="bar-label">6PM</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="bar" style="height: 40%"></div>
+                        <span class="bar-label">9PM</span>
+                    </div>
+                </div>
+                <p class="peak-info">🟢 Not too busy right now</p>
+            </div>
+
+            <!-- About -->
+            <div class="about-section">
+                <h3>About</h3>
+                <p class="about-text">A warm and inviting café perfect for working, reading, or catching up with friends. Known for excellent coffee and homemade pastries in a quiet neighborhood setting.</p>
+            </div>
+
+            <!-- Location -->
+            <div class="location-section">
+                <h3>Location</h3>
+                <div class="map-placeholder">
+                    <div class="map-overlay">
+                        <span class="map-icon">📍</span>
+                        <p>123 Main Street, Downtown</p>
+                    </div>
+                </div>
+                <button class="directions-btn">Get Directions</button>
+            </div>
+
+            <!-- Hours -->
+            <div class="hours-section">
+                <h3>Hours</h3>
+                <div class="hours-list">
+                    <div class="hours-row">
+                        <span class="day">Monday</span>
+                        <span class="time">7:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Tuesday</span>
+                        <span class="time">7:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-row today">
+                        <span class="day">Wednesday</span>
+                        <span class="time">7:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Thursday</span>
+                        <span class="time">7:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Friday</span>
+                        <span class="time">7:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Saturday</span>
+                        <span class="time">8:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Sunday</span>
+                        <span class="time">8:00 AM - 8:00 PM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews -->
+            <div class="reviews-section">
+                <div class="section-header-inline">
+                    <h3>Reviews</h3>
+                    <a href="#" class="view-all">See All →</a>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="User" class="review-avatar">
+                        <div class="review-user">
+                            <h5>Sarah Chen</h5>
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <span class="review-date">2 days ago</span>
+                    </div>
+                    <p class="review-text">Perfect spot for a quiet afternoon! The atmosphere is exactly what I needed. Great coffee and the staff is very friendly.</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://i.pravatar.cc/150?img=2" alt="User" class="review-avatar">
+                        <div class="review-user">
+                            <h5>Mike Johnson</h5>
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <span class="review-date">1 week ago</span>
+                    </div>
+                    <p class="review-text">Love this place! Comes here every week to work on my laptop. Fast Wi-Fi and comfortable seating.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Book Button -->
+        <div class="book-button-container">
+            <button class="book-btn">Reserve a Table</button>
+        </div>
+    </div>
+</body>
+</html>
