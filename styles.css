@@ -8,7 +8,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     color: #0A1930;
-    background: #FFFFFF;
+    background: #FEFAFA;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -172,7 +172,16 @@ a {
 }
 
 .btn-partner:hover {
-    background: #CE2750;
+    background: #8A1626;
+}
+
+.btn-partner-pink {
+    background: #FFC5D3;
+    color: #AB1B31;
+}
+
+.btn-partner-pink:hover {
+    background: #FFB0C4;
 }
 
 .btn-download {
@@ -274,15 +283,51 @@ a {
     position: relative;
     width: 308px;
     height: 627px;
-    border-radius: 40px;
     box-shadow: 0px 20px 25px -5px rgba(0,0,0,0.1), 0px 0px 10px 0px rgba(0,0,0,0.07);
     overflow: hidden;
 }
 
 .phone-screen {
+    position: absolute;
+    width: 280.73px;
+    height: 602.88px;
+    top: 12px;
+    left: 13.64px;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 40px;
+}
+
+.phone-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.phone-island {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84px;
+    height: 24px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.phone-button {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 77px;
+    height: 3px;
+    pointer-events: none;
+    z-index: 3;
 }
 
 /* Features Section */
@@ -373,7 +418,7 @@ a {
 .step-number {
     width: 40px;
     height: 40px;
-    background: #3E6BA8;
+    background: #96B3D5;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -417,7 +462,7 @@ a {
 
 /* App Features Section */
 .app-features {
-    min-height: 2120px;
+    padding: 100px 0 60px;
 }
 
 .app-feature {
@@ -425,7 +470,11 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 58px;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+}
+
+.app-feature:last-child {
+    margin-bottom: 0;
 }
 
 .app-feature-reverse {
@@ -491,6 +540,8 @@ a {
     height: 627px;
     margin: 0 auto 20px;
     border-radius: 40px;
+    background: #000;
+    padding: 8px;
     box-shadow: 0px 20px 25px -5px rgba(0,0,0,0.1), 0px 0px 10px 0px rgba(0,0,0,0.07);
     overflow: hidden;
 }
@@ -499,6 +550,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 32px;
 }
 
 .screenshot-title {
@@ -575,35 +627,55 @@ a {
 /* More Ways Section */
 .more-ways {
     padding: 100px 0;
+    background: #FFFFFF;
 }
 
 .ways-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    padding: 10px;
 }
 
 .way-card {
     background: #FFFFFF;
-    padding: 40px 24px;
+    padding: 32px 24px;
     border-radius: 20px;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.3), 0px 1px 3px 1px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.way-phone-mockup {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 20px;
+}
+
+.way-phone-mockup img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 .way-icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     background: #AB1B31;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
 }
 
 .way-icon img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
+}
+
+/* Keep for backward compatibility but hidden if using phone mockups */
+.way-card:has(.way-phone-mockup) .way-icon {
+    display: none;
 }
 
 .way-title {
@@ -622,8 +694,8 @@ a {
 
 /* Partner CTA Section */
 .partner-cta {
-    background: #FEFAFA;
-    padding: 40px 0;
+    background: #FEF8F9;
+    padding: 100px 0;
 }
 
 .cta-box {
@@ -668,13 +740,19 @@ a {
 .check-icon {
     width: 24px;
     height: 24px;
-    background: #AB1B31;
+    background: #FFC5D3;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #AB1B31;
     font-size: 16px;
+    flex-shrink: 0;
+}
+
+.check-icon-img {
+    width: 16px;
+    height: 16px;
     flex-shrink: 0;
 }
 
@@ -1433,14 +1511,6 @@ a {
     padding: 100px 0;
 }
 
-.cta-box {
-    background: linear-gradient(135deg, #AB1B31, #CE2750);
-    padding: 80px 60px;
-    border-radius: 32px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
 .cta-box h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 42px;
@@ -1750,7 +1820,7 @@ a {
     text-align: center;
 }
 
-.step-number {
+.partner-step .step-number {
     width: 64px;
     height: 64px;
     background: #AB1B31;
