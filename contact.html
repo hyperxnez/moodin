@@ -9,127 +9,99 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="contact-page">
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <nav class="nav">
+            <div class="nav-wrapper">
                 <div class="logo">
-                    <a href="index.html" class="logo-text">Moodin</a>
+                    <img src="https://www.figma.com/api/mcp/asset/d6cee393-89dd-46b8-be0d-988024491f58" alt="Moodin Logo" class="logo-icon">
+                    <span class="logo-text">Moodin.</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="partners.html">Partners</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                </ul>
-                <div class="nav-buttons">
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="partners.html">Partners</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+                <div class="nav-actions">
                     <a href="login.html" class="btn-outline">Log In</a>
                     <a href="signup.html" class="btn-primary">Sign Up</a>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Contact Hero -->
-    <section class="contact-hero">
-        <div class="container">
-            <h1 class="contact-hero-title">Get in Touch</h1>
-            <p class="contact-hero-subtitle">Have questions? We'd love to hear from you.</p>
+    <!-- Hero Section -->
+    <section class="contact-hero-section">
+        <div class="about-container">
+            <h1 class="contact-title">Get In Touch</h1>
+            <p class="contact-subtitle">Have questions or feedback? We'd love to hear from you. Our team typically responds within 24 hours.</p>
         </div>
     </section>
 
-    <!-- Contact Content -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form-container">
-                    <h2 class="contact-form-title">Send us a Message</h2>
-                    <form class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group-half">
-                                <label for="first-name" class="form-label">First Name</label>
-                                <input type="text" id="first-name" class="form-input" placeholder="John" required>
-                            </div>
-                            <div class="form-group-half">
-                                <label for="last-name" class="form-label">Last Name</label>
-                                <input type="text" id="last-name" class="form-input" placeholder="Doe" required>
-                            </div>
+    <!-- Contact Form & Info -->
+    <section class="contact-form-section">
+        <div class="about-container">
+            <div class="contact-form-card">
+                <h2 class="form-section-title">Send Us a Message</h2>
+                <form class="contact-form">
+                    <div class="form-row-2col">
+                        <div class="form-field">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-input" placeholder="Your name" required>
                         </div>
-
-                        <div class="form-group">
-                            <label for="contact-email" class="form-label">Email</label>
-                            <input type="email" id="contact-email" class="form-input" placeholder="john@example.com" required>
+                        <div class="form-field">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-input" placeholder="Your email" required>
                         </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Subject *</label>
+                        <input type="text" class="form-input" placeholder="Text" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Message *</label>
+                        <textarea class="form-textarea" placeholder="Text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-send-message">Send Message</button>
+                </form>
+            </div>
 
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone (Optional)</label>
-                            <input type="tel" id="phone" class="form-input" placeholder="+1 (555) 123-4567">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="info-icon-wrapper">
+                        <img src="https://www.figma.com/api/mcp/asset/f2ce1782-7221-48c3-85e4-7cafad6f3243" alt="Email" class="info-icon">
+                    </div>
+                    <div class="info-content">
+                        <h3 class="info-title">Email</h3>
+                        <div class="info-details">
+                            <p>support@moodin.app</p>
+                            <p>partnerships@moodin.app</p>
                         </div>
-
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <select id="subject" class="form-input" required>
-                                <option value="">Select a subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="support">Technical Support</option>
-                                <option value="partnership">Partnership Opportunity</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-textarea" rows="6" placeholder="Tell us how we can help..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-submit">Send Message</button>
-                    </form>
+                    </div>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="contact-info-container">
-                    <h2 class="contact-info-title">Contact Information</h2>
-                    
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">📧</div>
-                        <div class="contact-info-text">
-                            <h4>Email</h4>
-                            <p>support@moodin.com</p>
-                            <p>partnerships@moodin.com</p>
+                <div class="contact-info-card">
+                    <div class="info-icon-wrapper">
+                        <img src="https://www.figma.com/api/mcp/asset/fc67786e-ae48-4e16-bc4b-3d2146fe771d" alt="Phone" class="info-icon">
+                    </div>
+                    <div class="info-content">
+                        <h3 class="info-title">Phone</h3>
+                        <div class="info-details">
+                            <p>+84123456789</p>
+                            <p>Mon-Fri, 9am-6pm.</p>
                         </div>
                     </div>
-
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">📞</div>
-                        <div class="contact-info-text">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                            <p>Mon-Fri: 9AM - 6PM EST</p>
-                        </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="info-icon-wrapper">
+                        <img src="https://www.figma.com/api/mcp/asset/fd7ac67a-78ba-485c-afb5-8083a8dd01e8" alt="Office" class="info-icon">
                     </div>
-
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">📍</div>
-                        <div class="contact-info-text">
-                            <h4>Office</h4>
-                            <p>123 Innovation Street</p>
-                            <p>San Francisco, CA 94103</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-info-card">
-                        <div class="contact-info-icon">💬</div>
-                        <div class="contact-info-text">
-                            <h4>Social Media</h4>
-                            <div class="contact-social-links">
-                                <a href="#" class="contact-social-link">Facebook</a>
-                                <a href="#" class="contact-social-link">Instagram</a>
-                                <a href="#" class="contact-social-link">Twitter</a>
-                                <a href="#" class="contact-social-link">LinkedIn</a>
-                            </div>
+                    <div class="info-content">
+                        <h3 class="info-title">Office</h3>
+                        <div class="info-details">
+                            <p>369 Nguyen Van Cu, Ha Noi</p>
                         </div>
                     </div>
                 </div>
@@ -137,72 +109,58 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="contact-faq-section">
-        <div class="container">
-            <h2 class="section-title center">Frequently Asked Questions</h2>
-            <p class="faq-intro">Find quick answers to common questions</p>
-            
-            <div class="faq-grid">
-                <div class="faq-card">
-                    <h4>How does Moodin work?</h4>
-                    <p>Moodin uses your current mood to recommend restaurants and cafés that match your emotional state and preferences.</p>
+    <!-- Newsletter Section -->
+    <section class="newsletter-section-contact">
+        <div class="about-container">
+            <div class="newsletter-card-contact">
+                <div class="newsletter-content-left">
+                    <h2 class="newsletter-title-contact">Stay in the loop</h2>
+                    <p class="newsletter-text-contact">Subscribe to our newsletter for mood insights, feature updates, and exclusive offers.</p>
                 </div>
-                <div class="faq-card">
-                    <h4>Is Moodin free to use?</h4>
-                    <p>Yes! Moodin is completely free for users. We work with venue partners to provide you the best recommendations.</p>
+                <div class="newsletter-form-right">
+                    <div class="newsletter-input-group">
+                        <input type="email" class="newsletter-input-contact" placeholder="Text">
+                        <button class="newsletter-btn-contact">Subscribe</button>
+                    </div>
+                    <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
                 </div>
-                <div class="faq-card">
-                    <h4>How can I add my venue?</h4>
-                    <p>Visit our <a href="partners.html">Partners page</a> to learn more about joining our network of venues.</p>
-                </div>
-                <div class="faq-card">
-                    <h4>What cities are you in?</h4>
-                    <p>We're currently available in major cities across the US, with plans to expand internationally soon.</p>
-                </div>
-            </div>
-            
-            <div class="faq-cta">
-                <p>Still have questions? <a href="#" class="inline-link-primary">Check our full FAQ</a></p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="footer-title">Moodin</h3>
-                    <p class="footer-description">Find the perfect place for your mood.</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Legal</h4>
-                    <ul class="footer-links">
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="terms.html#privacy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-heading">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
+    <footer class="about-footer">
+        <div class="about-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://www.figma.com/api/mcp/asset/1b4dc7d0-7f5d-4f84-a0db-6b056f75b96c" alt="Moodin Logo" class="logo-icon">
+                        <span class="footer-logo-text">Moodin.</span>
+                    </a>
+                    <p class="footer-tagline">Find your vibe, not just a place.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/26b2ff28-f921-43fd-b0a6-3674ee82c20e" alt="Facebook" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/078758be-c253-4e5b-b381-634b08ec9eab" alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/7674a3c9-0fa3-4150-9aad-bf6b806f84c1" alt="Twitter" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/66d8a635-85ac-43a7-8f3f-3827990fa174" alt="LinkedIn" class="social-icon-img">
+                        </a>
                     </div>
                 </div>
+                <div class="footer-links-group">
+                    <a href="about.html">About Us</a>
+                    <a href="partners.html">Partners</a>
+                    <a href="contact.html">Support</a>
+                    <a href="terms.html">Legal</a>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Moodin. All rights reserved.</p>
-            </div>
+            <p class="footer-copyright">© 2025 Moodin, Inc. All rights reserved.</p>
         </div>
     </footer>
 </body>

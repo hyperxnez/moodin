@@ -7,74 +7,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="app-styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="mobile-frame">
-        <!-- Status Bar -->
-        <div class="status-bar">
-            <span class="time">9:41</span>
-            <div class="status-icons">
-                <span class="signal">📶</span>
-                <span class="wifi">📶</span>
-                <span class="battery">🔋</span>
+<body class="auth-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="https://www.figma.com/api/mcp/asset/d6cee393-89dd-46b8-be0d-988024491f58" alt="Moodin Logo" class="logo-icon">
+                    <span class="logo-text">Moodin.</span>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="partners.html">Partners</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-outline active">Log In</a>
+                    <a href="signup.html" class="btn-primary">Sign Up</a>
+                </div>
             </div>
         </div>
+    </header>
 
-        <!-- Auth Content -->
-        <div class="auth-container">
-            <button class="close-btn" onclick="history.back()">✕</button>
+    <div class="auth-content-wrapper">
+        <div class="auth-modal">
+            <a href="index.html" class="close-btn">
+                <img src="https://www.figma.com/api/mcp/asset/5030d2ae-2eea-41c4-a30a-ed266f1320a4" alt="Close">
+            </a>
             
-            <div class="auth-header">
-                <div class="logo-large">
-                    <span class="logo-text-large">Moodin</span>
-                </div>
-                <h1 class="auth-title">Welcome Back!</h1>
-                <p class="auth-subtitle">Log in to discover places that match your mood</p>
+            <div class="modal-header">
+                <h1 class="modal-title">Welcome Back</h1>
+                <p class="modal-subtitle">Log in to continue discovering places that match your mood</p>
             </div>
 
-            <form class="auth-form">
-                <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+            <form class="modal-form">
+                <div class="form-field-group">
+                    <div class="form-field-modal">
+                        <label class="field-label">Email</label>
+                        <input type="email" class="field-input" placeholder="Your email" required>
+                    </div>
+
+                    <div class="form-field-modal">
+                        <label class="field-label">Password</label>
+                        <input type="password" class="field-input" placeholder="Your password" required>
+                    </div>
+
+                    <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
 
-                <div class="form-group">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
-                </div>
-
-                <div class="form-options">
-                    <label class="checkbox-label">
-                        <input type="checkbox" class="form-checkbox">
-                        <span>Remember me</span>
-                    </label>
-                    <a href="#" class="forgot-link">Forgot Password?</a>
-                </div>
-
-                <button type="submit" class="auth-btn">Log In</button>
+                <button type="submit" class="btn-modal-primary">Login</button>
             </form>
 
-            <div class="divider">
-                <span class="divider-text">or continue with</span>
+            <div class="modal-divider">
+                <span class="divider-line"></span>
+                <span class="divider-text">Or</span>
+                <span class="divider-line"></span>
             </div>
 
-            <div class="social-auth">
-                <button class="social-btn">
-                    <span class="social-icon">🔵</span>
-                    <span>Facebook</span>
-                </button>
-                <button class="social-btn">
-                    <span class="social-icon">🔴</span>
-                    <span>Google</span>
-                </button>
+            <div class="social-buttons">
+                <button class="social-btn-modal">Login with Google</button>
+                <button class="social-btn-modal">Login with Apple</button>
             </div>
 
-            <p class="auth-footer">
+            <p class="modal-footer-text">
                 Don't have an account? 
-                <a href="signup.html" class="auth-link">Sign Up</a>
+                <a href="signup.html" class="modal-link">Sign up</a>
             </p>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="about-footer">
+        <div class="about-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="https://www.figma.com/api/mcp/asset/1b4dc7d0-7f5d-4f84-a0db-6b056f75b96c" alt="Moodin Logo" class="logo-icon">
+                        <span class="footer-logo-text">Moodin.</span>
+                    </a>
+                    <p class="footer-tagline">Find your vibe, not just a place.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/26b2ff28-f921-43fd-b0a6-3674ee82c20e" alt="Facebook" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/078758be-c253-4e5b-b381-634b08ec9eab" alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/7674a3c9-0fa3-4150-9aad-bf6b806f84c1" alt="Twitter" class="social-icon-img">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="https://www.figma.com/api/mcp/asset/66d8a635-85ac-43a7-8f3f-3827990fa174" alt="LinkedIn" class="social-icon-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <a href="about.html">About Us</a>
+                    <a href="partners.html">Partners</a>
+                    <a href="contact.html">Support</a>
+                    <a href="terms.html">Legal</a>
+                </div>
+            </div>
+            <p class="footer-copyright">© 2025 Moodin, Inc. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
