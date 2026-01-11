@@ -965,6 +965,18 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .mobile-frame {
+        max-width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
 @media (max-width: 428px) {
     body {
         padding: 0;
@@ -974,5 +986,86 @@ body {
         border-radius: 0;
         max-width: 100%;
         height: 100vh;
+        box-shadow: none;
+    }
+    
+    .status-bar {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .app-header {
+        padding: 12px 20px;
+    }
+    
+    .logo-text-app {
+        font-size: 20px;
+    }
+    
+    .notification-btn {
+        font-size: 20px;
+    }
+    
+    .mood-section,
+    .places-section {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .mood-btn {
+        min-width: 60px;
+    }
+    
+    .mood-emoji {
+        font-size: 28px;
+    }
+    
+    .mood-label {
+        font-size: 11px;
+    }
+    
+    .place-card {
+        padding: 12px;
+    }
+    
+    .place-name {
+        font-size: 14px;
+    }
+    
+    .place-location,
+    .place-type {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 375px) {
+    .mobile-frame {
+        height: 100%;
+    }
+    
+    .mood-section,
+    .places-section {
+        padding: 16px;
+    }
+    
+    .section-title {
+        font-size: 16px;
+    }
+    
+    .mood-btn {
+        min-width: 55px;
+        gap: 4px;
+    }
+    
+    .mood-emoji {
+        font-size: 24px;
+    }
+    
+    .mood-label {
+        font-size: 10px;
     }
 }
