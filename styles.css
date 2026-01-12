@@ -113,6 +113,45 @@ a {
     align-items: center;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #0A1930;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
 /* Buttons */
 .btn-outline {
     padding: 12px 20px;
@@ -180,12 +219,12 @@ a {
 }
 
 .btn-partner-pink {
-    background: #FFC5D3;
-    color: #AB1B31;
+    background: #AB1B31;
+    color: #FFFFFF;
 }
 
 .btn-partner-pink:hover {
-    background: #FFB0C4;
+    background: #CE2750;
 }
 
 .btn-download {
@@ -1128,8 +1167,37 @@ a {
     }
     
     /* Header */
+    .hamburger-menu {
+        display: flex;
+    }
+    
     .nav-links {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .nav-links a {
+        font-size: 24px;
+        padding: 12px 24px;
     }
     
     .nav-actions {
@@ -1145,6 +1213,11 @@ a {
     /* Hero Section */
     .hero {
         padding: 60px 0 40px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
     }
     
     .hero-title {
@@ -1209,6 +1282,15 @@ a {
         gap: 12px;
     }
     
+    .download-stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .download-stat-number {
+        font-size: 28px;
+    }
+
     /* Buttons */
     .btn-large,
     .btn-partner,
@@ -1263,6 +1345,19 @@ a {
         border-radius: 12px;
     }
     
+    .download-stats {
+        gap: 20px;
+    }
+    
+    .download-stat-number {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    
+    .download-stat-label {
+        font-size: 14px;
+    }
+
     /* Hero Section */
     .hero {
         padding: 40px 0 30px;
@@ -4028,6 +4123,476 @@ a {
     font-size: 14px;
     font-weight: 400;
     color: #4A4E69;
+}
+
+/* Terms Page Responsive Styles */
+@media (max-width: 1200px) {
+    .about-container {
+        padding: 0 80px;
+    }
+    
+    .values-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-container {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 0 50px;
+    }
+    
+    .about-main-title {
+        font-size: 32px;
+    }
+    
+    .mission-vision-grid {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .pricing-container {
+        padding: 0 50px;
+    }
+    
+    .pricing-grid {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 24px;
+    }
+    
+    .about-hero-section {
+        padding-top: 60px;
+        padding-bottom: 32px;
+    }
+    
+    .about-main-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .about-main-subtitle {
+        font-size: 16px;
+    }
+    
+    .mission-vision-section {
+        padding: 32px 0;
+    }
+    
+    .mv-title {
+        font-size: 24px;
+    }
+    
+    .mv-text {
+        font-size: 14px;
+    }
+    
+    .values-section-new {
+        padding: 32px 0;
+    }
+    
+    .section-heading {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .values-grid-new {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .leadership-section {
+        padding: 32px 0;
+    }
+    
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .newsletter-section {
+        padding: 32px 0;
+    }
+    
+    .newsletter-box {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px;
+    }
+    
+    .newsletter-content {
+        max-width: 100%;
+    }
+    
+    .newsletter-title {
+        font-size: 20px;
+    }
+    
+    .newsletter-form {
+        max-width: 100%;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .newsletter-input {
+        width: 100%;
+    }
+    
+    .newsletter-btn {
+        width: 100%;
+    }
+    
+    /* Partners Page Responsive */
+    .partners-hero {
+        padding-top: 60px;
+        padding-bottom: 32px;
+    }
+    
+    .why-partner-section {
+        padding: 32px 0;
+    }
+    
+    .how-it-works-section {
+        padding: 32px 0;
+    }
+    
+    .pricing-section {
+        padding: 32px 0;
+    }
+    
+    .pricing-container {
+        padding: 0 24px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .faq-container {
+        padding: 0 24px;
+    }
+    
+    .faq-item {
+        padding: 20px 24px;
+    }
+    
+    .faq-question {
+        font-size: 16px;
+    }
+    
+    .faq-answer {
+        font-size: 14px;
+    }
+    
+    .cta-grow-section {
+        padding: 32px 0;
+    }
+    
+    .cta-grow-box {
+        padding: 32px 0;
+    }
+    
+    .cta-grow-box h2 {
+        font-size: 24px;
+    }
+    
+    .cta-grow-box p {
+        font-size: 16px;
+    }
+    
+    /* Contact Page Responsive */
+    .contact-hero-section {
+        padding-top: 60px;
+        padding-bottom: 32px;
+    }
+    
+    .contact-title {
+        font-size: 28px;
+    }
+    
+    .contact-subtitle {
+        font-size: 16px;
+    }
+    
+    .contact-form-section {
+        padding: 32px 0;
+    }
+    
+    .contact-form-card {
+        padding: 24px;
+    }
+    
+    .form-section-title {
+        font-size: 24px;
+    }
+    
+    .contact-info-grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .contact-info-card {
+        width: 100%;
+    }
+    
+    .form-row-2col {
+        flex-direction: column;
+    }
+    
+    .terms-main-title {
+        font-size: 28px;
+    }
+    
+    .terms-date {
+        font-size: 16px;
+    }
+    
+    .terms-card {
+        padding: 24px;
+    }
+    
+    .terms-card-title {
+        font-size: 20px;
+    }
+    
+    .terms-card-text {
+        font-size: 14px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-links-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 0 16px;
+    }
+    
+    .about-hero-section {
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    
+    .about-main-title {
+        font-size: 24px;
+    }
+    
+    .about-main-subtitle {
+        font-size: 14px;
+    }
+    
+    .mission-vision-section {
+        padding: 24px 0;
+    }
+    
+    .mv-title {
+        font-size: 20px;
+    }
+    
+    .values-section-new {
+        padding: 24px 0;
+    }
+    
+    .section-heading {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .value-card-new {
+        padding: 20px;
+    }
+    
+    .leadership-section {
+        padding: 24px 0;
+    }
+    
+    .newsletter-section {
+        padding: 24px 0;
+    }
+    
+    .newsletter-box {
+        padding: 16px;
+    }
+    
+    .newsletter-title {
+        font-size: 18px;
+    }
+    
+    .newsletter-text {
+        font-size: 14px;
+    }
+    
+    /* Partners Page Responsive */
+    .partners-hero {
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    
+    .btn-hero {
+        padding: 16px 24px;
+        font-size: 14px;
+    }
+    
+    .why-partner-section {
+        padding: 24px 0;
+    }
+    
+    .how-it-works-section {
+        padding: 24px 0;
+    }
+    
+    .pricing-section {
+        padding: 24px 0;
+    }
+    
+    .pricing-container {
+        padding: 0 16px;
+    }
+    
+    .pricing-card {
+        padding: 24px;
+        gap: 24px;
+    }
+    
+    .faq-container {
+        padding: 0 16px;
+    }
+    
+    .faq-list {
+        gap: 16px;
+        margin-top: 24px;
+    }
+    
+    .faq-item {
+        padding: 16px 20px;
+        border-radius: 16px;
+    }
+    
+    .faq-question {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .faq-answer {
+        font-size: 13px;
+    }
+    
+    .faq-cta {
+        margin-top: 24px;
+        gap: 16px;
+    }
+    
+    .cta-grow-section {
+        padding: 24px 0;
+    }
+    
+    .cta-grow-box {
+        padding: 24px 0;
+    }
+    
+    .cta-grow-box h2 {
+        font-size: 20px;
+    }
+    
+    .cta-grow-box p {
+        font-size: 14px;
+    }
+    
+    /* Contact Page Responsive */
+    .contact-hero-section {
+        padding-top: 40px;
+        padding-bottom: 24px;
+    }
+    
+    .contact-title {
+        font-size: 24px;
+    }
+    
+    .contact-subtitle {
+        font-size: 14px;
+    }
+    
+    .contact-form-section {
+        padding: 24px 0;
+    }
+    
+    .contact-form-card {
+        padding: 20px;
+    }
+    
+    .form-section-title {
+        font-size: 20px;
+    }
+    
+    .back-button {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .back-button img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .terms-main-title {
+        font-size: 24px;
+    }
+    
+    .terms-date {
+        font-size: 14px;
+    }
+    
+    .terms-card {
+        padding: 20px;
+        gap: 16px;
+    }
+    
+    .terms-card-title {
+        font-size: 18px;
+    }
+    
+    .newsletter-input-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .newsletter-input,
+    .btn-subscribe {
+        width: 100%;
+    }
 }
 
 /* Terms Page Responsive Styles */
